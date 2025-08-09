@@ -18,20 +18,27 @@ export const Header = () => {
           aria-label="User menu"
         >
           <ul className="header__icons__list list-unstyled d-flex justify-content-end align-items-center mb-0">
-            <li className="header__icon rounded-circle p-2">
-              <a href="#" aria-label="User profile">
-                <img src={user} alt="User-icon" />
-              </a>
+            <li className="rounded-circle border p-1">
+              <div className="header__icon rounded-circle p-2">
+                <a href="#" aria-label="User profile">
+                  <img src={user} alt="User-icon" />
+                </a>
+              </div>
             </li>
-            <li className="header__icon rounded-circle p-2">
-              <a href="#" aria-label="Favorites">
-                <img src={favorite} alt="Favorites-icon" />
-              </a>
+
+            <li className="rounded-circle border p-1">
+              <div className="header__icon rounded-circle p-2">
+                <a href="#" aria-label="Favorites">
+                  <img src={favorite} alt="Favorites-icon" />
+                </a>
+              </div>
             </li>
-            <li className="header__icon rounded-circle px-2 py-1">
-              <a href="#" aria-label="Shopping bag">
-                <img src={bag} alt="bag-icon" />
-              </a>
+            <li className="rounded-circle border p-1">
+              <div className="header__icon rounded-circle px-2 py-1">
+                <a href="#" aria-label="Shopping bag">
+                  <img src={bag} alt="bag-icon" />
+                </a>
+              </div>
             </li>
             <li>
               <button aria-label="Open menu">
