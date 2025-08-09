@@ -19,7 +19,7 @@ export const Header = () => {
         >
           <ul className="header__icons__list list-unstyled d-flex justify-content-end align-items-center mb-0">
             <li className="rounded-circle justify-content-center border p-1">
-              <div className="header__icon rounded-circle p-2">
+              <div className="header__icon rounded-circle p-2 d-flex align-items-center">
                 <a href="#" aria-label="User profile">
                   <img src={user} alt="User-icon" />
                 </a>
@@ -27,21 +27,21 @@ export const Header = () => {
             </li>
 
             <li className="rounded-circle justify-content-center border p-1">
-              <div className="header__icon rounded-circle p-2">
+              <div className="header__icon rounded-circle p-2 d-flex align-items-center">
                 <a href="#" aria-label="Favorites">
                   <img src={favorite} alt="Favorites-icon" />
                 </a>
               </div>
             </li>
             <li className="rounded-circle justify-content-center border p-1">
-              <div className="header__icon rounded-circle px-2 py-1">
+              <div className="header__icon rounded-circle px-2 py-1 d-flex align-items-center">
                 <a href="#" aria-label="Shopping bag">
                   <img src={bag} alt="bag-icon" />
                 </a>
               </div>
             </li>
             <li className="rounded-circle justify-content-center border p-1">
-              <div className="header__icon header__burger rounded-circle ">
+              <div className="header__icon header__burger rounded-circle d-flex align-items-center">
                 <button
                   aria-label="Open menu"
                   className="border-0 bg-transparent"
