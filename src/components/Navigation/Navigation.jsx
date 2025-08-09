@@ -2,6 +2,7 @@ import user from "../../icon/user.svg";
 import burger from "../../icon/burger.svg";
 import bag from "../../icon/bag.svg";
 import favorite from "../../icon/favorite.svg";
+import "../styles/navigation.less";
 
 export const Navigation = () => {
   return (
