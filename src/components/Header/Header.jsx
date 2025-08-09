@@ -9,12 +9,12 @@ export const Header = () => {
   return (
     <header className="header container-fluid">
       <div className="header-container row text-left">
-        <div className="header-container-logo col-xs-4">
+        <div className="header-container-logo col-xs-5">
           <img src={logo} alt="logo" />
         </div>
 
         <nav
-          className="header-container-icons col-xs-8 text-right"
+          className="header-container-icons col-xs-7 text-right"
           aria-label="User menu"
         >
           <ul className="header-icons-list list-unstyled ">
