@@ -9,26 +9,26 @@ export const Header = () => {
   return (
     <header className="header container-fluid">
       <div className="header__container row text-left">
-        <div className="header__logo col-xs-5  ">
+        <div className="header__logo col-5 align-content-center">
           <img src={logo} alt="logo" />
         </div>
 
         <nav
-          className="header__container__icons col-xs-7 text-right"
+          className="header__container__icons col-7 text-right"
           aria-label="User menu"
         >
-          <ul className="header__icons__list list-unstyled">
-            <li>
+          <ul className="header__icons__list list-unstyled d-flex justify-content-end align-items-center mb-0">
+            <li className="header__icon rounded-circle p-2">
               <a href="#" aria-label="User profile">
                 <img src={user} alt="User-icon" />
               </a>
             </li>
-            <li>
+            <li className="header__icon rounded-circle p-2">
               <a href="#" aria-label="Favorites">
                 <img src={favorite} alt="Favorites-icon" />
               </a>
             </li>
-            <li>
+            <li className="header__icon rounded-circle px-2 py-1">
               <a href="#" aria-label="Shopping bag">
                 <img src={bag} alt="bag-icon" />
               </a>
