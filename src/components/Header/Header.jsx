@@ -4,10 +4,12 @@ import logo from "../../icon/logo.svg";
 import search from "../../icon/search.svg";
 import { Navigation } from "../Navigation/Navigation";
 import { SlickSlider } from "../SlickSlider/SlickSlider";
+import { TopBar } from "../TopBar/TopBar";
 
 export const Header = () => {
   return (
     <header className="header container-fluid">
+      <TopBar />
       <div className="header__container row text-left">
         <div className="header__logo col-5 align-content-center">
           <img src={logo} alt="logo" />
