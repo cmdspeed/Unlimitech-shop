@@ -37,7 +37,7 @@ export const Products = () => {
           <div className="col-6" key={idx}>
             <a
               href={img.link}
-              className="products__item d-block position-relative rounded overflow-hidden"
+              className="products__item d-block position-relative rounded-5 overflow-hidden"
             >
               <img src={img.url} alt={img.title} loading="lazy" />
               <div className="products__description position-absolute top-50 start-50 translate-middle ">
