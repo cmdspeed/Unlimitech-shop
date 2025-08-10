@@ -31,8 +31,8 @@ export const Products = () => {
   }, []);
 
   return (
-    <div className="products container my-4">
-      <div className="products__items row g-3">
+    <div className="products container">
+      <div className="products__items row g-4">
         {images.map((img, idx) => (
           <div className="col-6" key={idx}>
             <a
