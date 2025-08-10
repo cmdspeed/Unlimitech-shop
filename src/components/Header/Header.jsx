@@ -3,6 +3,7 @@ import logo from "../../icon/logo.svg";
 
 import search from "../../icon/search.svg";
 import { Navigation } from "../Navigation/Navigation";
+import { SlickSlider } from "../SlickSlider/SlickSlider";
 
 export const Header = () => {
   return (
@@ -35,6 +36,7 @@ export const Header = () => {
             <img src={search} alt="search icon" className="form__btn__icon" />
           </button>
         </form>
+        <SlickSlider />
       </div>
     </header>
   );
