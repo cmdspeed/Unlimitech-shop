@@ -48,9 +48,9 @@ export const SlickSlider = () => {
   }
 
   return (
-    <div className="slider mx-auto p-0">
+    <div className="slider mx-auto p-0 row ">
       {images.map((image) => (
-        <div key={image.id} className="slider__item">
+        <div key={image.id} className="slider__item col-12">
           <div className="slider__image__wrapper position-relative overflow-hidden ">
             <img
               src={image.img}
