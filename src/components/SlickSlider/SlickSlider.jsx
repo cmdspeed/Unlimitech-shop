@@ -56,6 +56,7 @@ export const SlickSlider = () => {
               src={image.img}
               alt={image.title}
               className="slider__image d-block object-fit-cover rounded-5"
+              loading="lazy"
             />
             <div className="slider__overlay position-absolute">
               <h2>{image.title}</h2>
