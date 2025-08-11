@@ -14,6 +14,73 @@
   font-weight: 800;
 }
 
+.products {
+  gap: 0.71rem;
+  padding: 0 1.14rem;
+}
+
+.card {
+  min-width: 19.14rem;
+
+  &-body {
+    padding: 0;
+  }
+
+  &__all {
+    margin: 0.57rem;
+    padding: 0.17rem 0.35rem;
+    font-size: 0.85rem;
+    line-height: 1.28;
+  }
+  &__onSale {
+    background-color: #c40837;
+  }
+  &__isNew {
+    background-color: #36b588;
+  }
+  &__isBestseller {
+    background-color: #a70584;
+  }
+
+  &__img {
+    height: 355px;
+  }
+  &__title {
+    font-size: 0.85rem;
+    line-height: 1;
+    color: #292929;
+    margin: 0.57rem 0 0.29rem 0;
+  }
+  &__available {
+    font-size: 0.71rem;
+    line-height: 1.18;
+    color: #595959;
+    margin: 0.29rem 0;
+    font-weight: 500;
+  }
+  &__price {
+    gap: 0.43rem;
+    margin: 0.36rem 0;
+    font-weight: 500;
+    font-size: 1.07rem;
+    line-height: 1.29;
+    &__normal {
+      color: #0068ff;
+    }
+    &__sale {
+      background-color: #c40837;
+      padding: 0.071rem 0.29rem;
+    }
+    &__old {
+      color: #595959;
+    }
+    &__beforeSale {
+      font-size: 0.85rem;
+      line-height: 1.29;
+      color: #595959;
+    }
+  }
+}
 .seeMore {
   margin-bottom: 1.92rem;
   &__link {
