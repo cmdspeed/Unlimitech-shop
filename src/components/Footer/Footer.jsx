@@ -4,6 +4,12 @@ import $ from "jquery";
 import arrowdrop from "../../icon/arrow-drop.svg";
 import phone from "../../icon/phone-footer.svg";
 import email from "../../icon/email.svg";
+import inpostkurier from "../../icon/inpost-kurier.png";
+import inpostpaczkomat from "../../icon/inpost-paczkomaty.png";
+import blik from "../../icon/blik.png";
+import przelewy24 from "../../icon/przelewy24.png";
+import paypo from "../../icon/paypo.png";
+import paypal from "../../icon/paypal.png";
 
 export const Footer = () => {
   useEffect(() => {
@@ -237,6 +243,30 @@ export const Footer = () => {
               Jesteśmy do Twojej dyspozycji od poniedziałku do piątku w
               godzinach 8:00 - 16:00
             </p>
+          </div>
+
+          <div className="footer__delivery row border-top ">
+            <h6 className="footer__delivery__title fw-bold ">
+              Dostawa i płatność
+            </h6>
+            <div className="footer__delivery__icon col-4 col-md-2 p-0">
+              <img src={inpostkurier} alt="InPost kurier" />
+            </div>
+            <div className="footer__delivery__icon col-4 col-md-2 p-0">
+              <img src={inpostpaczkomat} alt="InPost paczkomaty" />
+            </div>
+            <div className="footer__delivery__icon col-4 col-md-2 p-0">
+              <img src={blik} alt="blik" />
+            </div>
+            <div className="footer__delivery__icon col-4 col-md-2 p-0">
+              <img src={przelewy24} alt="przelewy24" />
+            </div>
+            <div className="footer__delivery__icon col-4 col-md-2 p-0">
+              <img src={paypo} alt="paypo" />
+            </div>
+            <div className="footer__delivery__icon col-4 col-md-2 p-0">
+              <img src={paypal} alt="paypal" />
+            </div>
           </div>
         </div>
       </div>
