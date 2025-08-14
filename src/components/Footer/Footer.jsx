@@ -6,6 +6,38 @@ import phone from "../../icon/phone-footer.svg";
 import email from "../../icon/email.svg";
 
 export const Footer = () => {
+  useEffect(() => {
+    function checkMobile() {
+      return $(window).width() < 768;
+    }
+
+    const $headers = $(".mobile-wrapper h6");
+
+    $headers.off("click").on("click", function () {
+      if (checkMobile()) {
+        $(this).toggleClass("active");
+        $(this).next("ul").stop(true, true).slideToggle(200);
+      }
+    });
+
+    const resizeHandler = () => {
+      if (!checkMobile()) {
+        $(".mobile-wrapper ul").show();
+        $headers.removeClass("active");
+      } else {
+        $(".mobile-wrapper ul").hide();
+      }
+    };
+
+    $(window).on("resize", resizeHandler);
+    resizeHandler();
+
+    return () => {
+      $(window).off("resize", resizeHandler);
+      $headers.off("click");
+    };
+  }, []);
+
   return (
     <footer className="footer rounded-4 ">
       <div className="footer__container">
@@ -70,18 +102,12 @@ export const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/"
-                    className="footer__wrapper__list__item text-decoration-none "
-                  >
+                  <a href="#" className="text-decoration-none text-dark">
                     Polityka prywatności
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/"
-                    className="footer__wrapper__list__item text-decoration-none "
-                  >
+                  <a href="#" className="text-decoration-none text-dark">
                     Zasady gwarancji
                   </a>
                 </li>
