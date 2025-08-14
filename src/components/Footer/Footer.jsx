@@ -10,6 +10,9 @@ import blik from "../../icon/blik.png";
 import przelewy24 from "../../icon/przelewy24.png";
 import paypo from "../../icon/paypo.png";
 import paypal from "../../icon/paypal.png";
+import fb from "../../icon/fb.svg";
+import ig from "../../icon/instagram.svg";
+import tiktok from "../../icon/tiktok.svg";
 
 export const Footer = () => {
   useEffect(() => {
@@ -46,7 +49,7 @@ export const Footer = () => {
 
   return (
     <footer className="footer rounded-4 ">
-      <div className="footer__container">
+      <div>
         <div className="row">
           <div className="footer__wrapper col-12 col-md-2  mobile-wrapper ">
             <div className="footer__wrapper__border border-bottom border-1 ">
@@ -108,12 +111,18 @@ export const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-decoration-none text-dark">
+                  <a
+                    href="/"
+                    className="footer__wrapper__list__item text-decoration-none"
+                  >
                     Polityka prywatności
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-decoration-none text-dark">
+                  <a
+                    href="/"
+                    className="footer__wrapper__list__item text-decoration-none"
+                  >
                     Zasady gwarancji
                   </a>
                 </li>
@@ -223,13 +232,13 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="footer__wrapper footer__container col-12 col-md-4 row d-flex">
+          <div className="footer__wrapper footer__container col-12 col-md-4 d-flex flex-column border-bottom ">
             <h6 className="footer__wrapper__contact fw-semibold ">
               Skontaktuj się z nami
             </h6>
             <a
               href="tel:+48000000000"
-              className="footer__wrapper__tel fw-medium d-flex text-decoration-none"
+              className="footer__wrapper__tel fw-medium d-flex  text-decoration-none"
             >
               <img src={phone} alt="telefon" /> (+48) 000 000 000
             </a>
@@ -245,27 +254,71 @@ export const Footer = () => {
             </p>
           </div>
 
-          <div className="footer__delivery row border-top ">
+          <div className="footer__delivery row  ">
             <h6 className="footer__delivery__title fw-bold ">
               Dostawa i płatność
             </h6>
             <div className="footer__delivery__icon col-4 col-md-2 p-0">
-              <img src={inpostkurier} alt="InPost kurier" />
+              <a href="/">
+                <img src={inpostkurier} alt="InPost kurier" />
+              </a>
             </div>
             <div className="footer__delivery__icon col-4 col-md-2 p-0">
-              <img src={inpostpaczkomat} alt="InPost paczkomaty" />
+              <a href="/">
+                <img src={inpostpaczkomat} alt="InPost paczkomaty" />
+              </a>
             </div>
             <div className="footer__delivery__icon col-4 col-md-2 p-0">
-              <img src={blik} alt="blik" />
+              <a href="/">
+                {" "}
+                <img src={blik} alt="blik" />
+              </a>
             </div>
             <div className="footer__delivery__icon col-4 col-md-2 p-0">
-              <img src={przelewy24} alt="przelewy24" />
+              <a href="/">
+                {" "}
+                <img src={przelewy24} alt="przelewy24" />
+              </a>
             </div>
             <div className="footer__delivery__icon col-4 col-md-2 p-0">
-              <img src={paypo} alt="paypo" />
+              <a href="/">
+                {" "}
+                <img src={paypo} alt="paypo" />
+              </a>
             </div>
             <div className="footer__delivery__icon col-4 col-md-2 p-0">
-              <img src={paypal} alt="paypal" />
+              <a href="/">
+                <img src={paypal} alt="paypal" />
+              </a>
+            </div>
+            <div className="  footer__social p-0">
+              <h6 className="footer__social__title fw-bold ">Social media</h6>
+              <div className="footer__social__wrapper d-flex">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  className=" footer__social__icon"
+                >
+                  <img src={fb} alt="Facebook" />
+                </a>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  className=" footer__social__icon"
+                >
+                  <img src={ig} alt="Instagram" />
+                </a>
+                <a
+                  href="https://www.tiktok.com/"
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  className=" footer__social__icon"
+                >
+                  <img src={tiktok} alt="TikTok" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

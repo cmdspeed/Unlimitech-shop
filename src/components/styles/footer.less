@@ -3,9 +3,10 @@
   margin: 0 1.14rem;
   padding: 2.85rem 1.14rem;
   &__wrapper {
-    padding: 1.71rem 1.14rem;
+    padding: 0 1.14rem;
     &__border {
       border-color: #e3e3e3 !important;
+      padding: 1.71rem 0;
     }
 
     &__title {
@@ -52,16 +53,17 @@
     }
     &__desc {
       line-height: 1.66;
-      padding-left: 2.57rem;
+      padding-left: 2rem;
       font-size: 0.85rem;
     }
   }
   &__container {
     gap: 0.57rem;
+    padding: 1.71rem 1.14rem;
   }
   &__delivery {
-    padding-top: 1.71rem;
-    padding-bottom: 1.71rem;
+    padding: 1.71rem 1.14rem 0;
+
     width: 261px;
 
     &__title {
@@ -73,8 +75,23 @@
       margin-bottom: 0.57rem;
     }
   }
+  &__social {
+    &__icon {
+      margin-right: 1.42rem;
+    }
+    &__title {
+      font-size: 1.07rem;
+      line-height: 1.46;
+      color: #292929;
+      margin: 0.57rem;
+    }
+  }
 }
 
 .footer__wrapper__title.active .footer__wrapper__arrow {
   transform: rotate(180deg);
+}
+
+.footer__wrapper__title.active {
+  color: #292929;
 }
