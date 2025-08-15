@@ -10,12 +10,15 @@ export const Header = () => {
   return (
     <header className="header container-fluid">
       <TopBar />
+      <div className="header__container row align-items-center d-flex d-xxl-none">
+        <div className="col-12 d-flex justify-content-between align-items-center">
+          <div className="header__logo">
+            <img src={logo} alt="logo" />
+          </div>
 
-      <div className="header__container row text-left d-xxl-none">
-        <div className="header__logo col-5 align-content-center">
-          <img src={logo} alt="logo" />
+          <Navigation />
         </div>
-        <Navigation />
+
         <form
           role="search"
           aria-label="Wyszukiwarka"
@@ -37,6 +40,7 @@ export const Header = () => {
             <img src={search} alt="search icon" className="form__btn__icon" />
           </button>
         </form>
+
         <SlickSlider />
       </div>
 
