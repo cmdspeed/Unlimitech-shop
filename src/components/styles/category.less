@@ -16,12 +16,28 @@
 }
 
 .products {
+  display: grid;
   gap: 0.71rem;
   padding: 0 1.14rem;
+
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(19.14rem, 1fr);
+  overflow-x: auto;
+
+  @media (min-width: 992px) {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: visible;
+  }
 }
 
 .card {
   min-width: 19.14rem;
+  @media (min-width: 992px) {
+    width: 342px;
+
+    border: none;
+  }
 
   &-body {
     padding: 0;
@@ -45,6 +61,10 @@
 
   &__img {
     height: 355px;
+    @media (min-width: 992px) {
+      width: 342px;
+      height: 456px;
+    }
   }
   &__title {
     font-size: 0.85rem;
@@ -82,6 +102,7 @@
     }
   }
 }
+
 .seeMore {
   margin-bottom: 1.92rem;
   &__link {
