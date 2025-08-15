@@ -30,7 +30,6 @@ export const Products = () => {
       });
   }, []);
 
-  // Rozkładamy obrazki na 4 kolumny: 0..3
   const columns = useMemo(() => {
     const cols = [[], [], [], []];
     images.forEach((img, idx) => {
@@ -39,10 +38,8 @@ export const Products = () => {
     return cols;
   }, [images]);
 
-  // Kolumny 0 i 2: DUŻY potem MAŁY
-  // Kolumny 1 i 3: MAŁY potem DUŻY
   const renderColumn = (colItems, colIndex) => {
-    const invert = colIndex % 2 === 1; // odwrócenie: 1 i 3
+    const invert = colIndex % 2 === 1;
     const ordered =
       colItems.length === 2
         ? invert
@@ -54,8 +51,7 @@ export const Products = () => {
               { ...colItems[0], size: "large" },
               { ...colItems[1], size: "small" },
             ]
-        : // fallback gdy mniej niż 2 elementy
-          colItems.map((it, i) => ({
+        : colItems.map((it, i) => ({
             ...it,
             size: invert
               ? i === 0
@@ -77,7 +73,14 @@ export const Products = () => {
             key={`${colIndex}-${i}`}
             className={`products__item ${img.size}`}
           >
-            <img src={img.url} alt={img.title} loading="lazy" />
+            <img
+              src={img.url}
+              alt={img.title}
+              onError={(e) =>
+                (e.target.src = "https://placehold.co/600x400?text=no+photo")
+              }
+              loading="lazy"
+            />
             <div className="products__description">{img.title}</div>
           </a>
         ))}
