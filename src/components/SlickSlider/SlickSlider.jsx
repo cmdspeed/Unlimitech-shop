@@ -7,10 +7,14 @@ import "../styles/slickSlider.less";
 
 export const SlickSlider = () => {
   const [images, setImages] = useState([]);
-  const width = 358;
   const height = 520;
 
   useEffect(() => {
+    // ustalenie rozmiarów w zależności od typu urządzenia
+    const isDesktop = window.innerWidth >= 768;
+
+    const width = isDesktop ? 1400 : 358;
+
     fetch("https://picsum.photos/v2/list?limit=3")
       .then((res) => res.json())
       .then((data) => {
@@ -29,9 +33,10 @@ export const SlickSlider = () => {
   useEffect(() => {
     if (images.length > 0) {
       setTimeout(() => {
+        const isPC = window.innerWidth >= 1000;
         $(".slider").not(".slick-initialized").slick({
           dots: true,
-          arrows: false,
+          arrows: isPC,
           infinite: true,
           speed: 300,
           slidesToShow: 1,
