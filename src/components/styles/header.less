@@ -7,17 +7,63 @@
     padding: 1rem 1.6rem;
     font-size: 0.85rem;
     outline: none;
+
+    @media (min-width: 1400px) {
+      padding: 1rem 1.6rem;
+    }
   }
 
   &__btn {
     right: 4px;
     background-color: #f6f6f6;
-
     width: 40px;
     height: 40px;
   }
 }
 
-.header__container {
-  margin: 1.71rem 0 5.71rem;
+.header {
+  &__container {
+    margin: 1.71rem 0 5.71rem;
+  }
+  &__pc {
+    max-width: 1920px;
+    margin: 3.57rem auto;
+
+    gap: 2.28rem;
+    &__logo {
+      height: 24px;
+    }
+  }
+}
+
+.main__menu {
+  gap: 2.28rem;
+  &__wrapper {
+    max-width: 705px;
+    padding: 0;
+  }
+  &__link {
+    text-decoration: none;
+    color: #292929;
+    &--sale {
+      color: #c40837;
+    }
+
+    font-size: 1.14rem;
+    line-height: 1.25;
+    white-space: nowrap;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.header__search {
+  max-width: 225px;
+  width: 225px;
+}
+
+.header__icons--pc {
+  margin-left: 10px;
 }
