@@ -37,7 +37,7 @@ export const Category = () => {
   }, []);
 
   const calcMargin = (index) => ({
-    marginTop: `calc(${index * 2}rem +  0.57rem)`,
+    marginTop: `calc(${index * 2}rem + 0.57rem)`,
   });
 
   useEffect(() => {
@@ -68,21 +68,21 @@ export const Category = () => {
           <span className="section__category">Bestsellery</span>
         </div>
         <div className="seeMore">
-          <a href="/" className="seeMore__link">
+          <a href="#" className="seeMore__link">
             zobacz wszystkie
           </a>
         </div>
       </div>
 
-      <div className="products d-flex overflow-x-auto">
-        {filteredProducts.map((p) => (
-          <div className="card border-0" key={p.id}>
+      <div className="products">
+        {filteredProducts.slice(0, 4).map((p) => (
+          <div className="card" key={p.id}>
             <div className="position-relative">
               <img
                 src={p.url}
                 alt={p.name}
                 loading="lazy"
-                className="card__img rounded-4 object-fit-cover "
+                className="card__img rounded-4 object-fit-cover"
               />
               {p.onSale && (
                 <span className="card__onSale card__all text-white position-absolute top-0 start-0 rounded fw-bold">
@@ -99,7 +99,7 @@ export const Category = () => {
               )}
               {p.isBestseller && (
                 <span
-                  className="card__isBestseller card__all text-white rounded fw-bold  position-absolute top-0 start-0 "
+                  className="card__isBestseller card__all text-white rounded fw-bold position-absolute top-0 start-0"
                   style={calcMargin((p.onSale ? 1 : 0) + (p.isNew ? 1 : 0))}
                 >
                   BESTSELLER
@@ -109,12 +109,12 @@ export const Category = () => {
 
             <div className="card-body">
               <h6 className="card__title fw-semibold">{p.name}</h6>
-              <p className=" card__available ">
+              <p className="card__available">
                 Zapato | {p.available ? "Dostępny" : "Niedostępny"}
               </p>
               <div className="card__price d-flex">
                 <span
-                  className={`fw-bold  ${
+                  className={`fw-bold ${
                     p.onSale
                       ? "card__price__sale text-white rounded-1"
                       : "card__price__normal"
