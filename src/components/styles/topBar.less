@@ -1,11 +1,32 @@
-.top-bar {
+.topBar {
   &__phone {
     background: #0068ff;
     gap: 0.71rem;
     padding: 0.71rem;
+
     &__text {
       font-size: 0.92rem;
       line-height: 1.42;
+    }
+  }
+
+  &__desktop {
+    background: #0068ff;
+    padding: 0.64rem 0;
+    color: #fff;
+
+    font-size: 0.92rem;
+    line-height: 1.53;
+  }
+
+  &__item {
+    gap: 0.71rem;
+    padding-right: 4.57rem;
+    margin-right: 4.57rem;
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
     }
   }
 }
