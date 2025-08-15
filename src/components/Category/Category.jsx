@@ -68,7 +68,7 @@ export const Category = () => {
           <span className="section__category">Bestsellery</span>
         </div>
         <div className="seeMore">
-          <a href="#" className="seeMore__link">
+          <a href="/" className="seeMore__link">
             zobacz wszystkie
           </a>
         </div>
