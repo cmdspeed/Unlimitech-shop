@@ -113,6 +113,7 @@ export const Header = () => {
         <div className=" header__icons--pc col-auto d-flex align-items-center justify-content-center">
           <Navigation />
         </div>
+        <SlickSlider />
       </div>
     </header>
   );
