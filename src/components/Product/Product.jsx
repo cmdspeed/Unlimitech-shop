@@ -39,7 +39,7 @@ export const Products = () => {
   }, [images]);
 
   const renderColumn = (colItems, colIndex) => {
-    const invert = colIndex % 2 === 1; // odwrócenie: 1 i 3
+    const invert = colIndex % 2 === 1;
     const ordered =
       colItems.length === 2
         ? invert
@@ -73,7 +73,14 @@ export const Products = () => {
             key={`${colIndex}-${i}`}
             className={`products__item ${img.size}`}
           >
-            <img src={img.url} alt={img.title} loading="lazy" />
+            <img
+              src={img.url}
+              alt={img.title}
+              onError={(e) =>
+                (e.target.src = "https://placehold.co/600x400?text=no+photo")
+              }
+              loading="lazy"
+            />
             <div className="products__description">{img.title}</div>
           </a>
         ))}
