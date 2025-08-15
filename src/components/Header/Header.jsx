@@ -10,6 +10,7 @@ export const Header = () => {
   return (
     <header className="header container-fluid">
       <TopBar />
+
       <div className="header__container row text-left">
         <div className="header__logo col-5 align-content-center">
           <img src={logo} alt="logo" />
